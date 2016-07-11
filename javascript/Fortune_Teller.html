@@ -59,11 +59,11 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 				    "Web Developer"
 				    ];
 	var my_div = document.getElementById("fortune_teller");
-	var random_children = number_children [Math.floor(Math.random()*((number_children.length -1)))];
-	var random_partner = partner_name [Math.floor(Math.random()*((partner_name.length -1)))];
-	var random_job = job_title [Math.floor(Math.random()*((job_title.length -1)))];
-	var random_children = number_children [Math.floor(Math.random()*((number_children.length -1)))];
-	var random_location = locations [Math.floor(Math.random()*((locations.length -1)))];
+	var random_children = number_children [Math.floor(Math.random()*(number_children.length))];
+	var random_partner = partner_name [Math.floor(Math.random()*(partner_name.length))];
+	var random_job = job_title [Math.floor(Math.random()*(job_title.length))];
+	var random_children = number_children [Math.floor(Math.random()*(number_children.length))];
+	var random_location = locations [Math.floor(Math.random()*(locations.length))];
 	
 	my_div.innerHTML="<p> You will be a " +random_job + " in " + random_location + " and married to " + random_partner + " with "+ random_children + " Kids.</p>";
 
