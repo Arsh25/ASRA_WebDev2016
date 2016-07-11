@@ -1,0 +1,72 @@
+<!--
+Name: Arsh Chauhan
+ASRA WebDevelopment 2016
+Fortune Teller App: Tell people's fortune using JS
+-->
+
+<!-- 
+This solution is probably way too complicated 
+It gives a different answer on every load and outputs to a div -->  
+
+ 
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<meta charset="UTF-8">
+
+<head>
+<title>Fortune Teller</title>
+</head>
+
+<body>
+
+<div id = "fortune_teller" onload=document.getElementById("main")> <!-- Weird onload is to prevent using functions at this stage -->
+</div>
+
+<!-- Needs to be after the div is created. Else getElementById returns null -->
+<script type="text/javascript" id ="main">
+	var number_children = [0,1,2,3,4,5,6];
+
+	/*Exercise for advanced students
+	Base partner name on user's gender*/
+	var partner_name = [ "Ann Reed"
+						,"Michael Williams",
+						"Steve Robinson",
+						"Jesse Scott",
+						"Frances Barnes",
+						"Roger Long",
+						"Bonnie Hernandez",
+						"Susan Griffin",
+						"Steven Morris" 
+						];
+	var locations = ["Ho Chi Minh City, Vietnam",
+					 "Baghdad, Iraq",
+					 "Surat, India",
+					 "Cape Town, South Africa",
+					 "Rio de Janeiro, Brazil",
+					 "Jaipur, India",
+					 "Dhaka, Bangladesh",
+					 "Berlin, Germany",
+					 "Pyongyan, South Korea"
+					 ];
+	var job_title = ["Internet Application Developer",
+				    "Internet Developer",
+				    "Intranet Developer",
+				    "Web Content Developer",
+				    "Web Designer",
+				    "Web Developer"
+				    ];
+	var my_div = document.getElementById("fortune_teller");
+	var random_children = number_children [Math.floor(Math.random()*((number_children.length -1)))];
+	var random_partner = partner_name [Math.floor(Math.random()*((partner_name.length -1)))];
+	var random_job = job_title [Math.floor(Math.random()*((job_title.length -1)))];
+	var random_children = number_children [Math.floor(Math.random()*((number_children.length -1)))];
+	var random_location = locations [Math.floor(Math.random()*((locations.length -1)))];
+	
+	my_div.innerHTML="<p> You will be a " +random_job + " in " + random_location + " and married to " + random_partner + " with "+ random_children + " Kids.";
+
+</script>
+</body>
+</html>
