@@ -1,0 +1,46 @@
+<!--
+Name: Arsh Chauhan
+ASRA WebDevelopment 2016
+07/11/2016
+Public Domain
+Age Calculator App: Calculate two possible ages for a person 
+-->
+
+<!-- Exercise for advanced students:
+		1) Check for negative age and do not display
+		2) Get month and report the one correct age
+ -->	
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<meta charset="UTF-8">
+
+<head>
+<title>Age Calculator</title>
+</head>
+
+<body>
+
+<div id = "age_calc"> 
+<p>Enter your year of birth:<input type="date" id="birth_year"></input>
+<input type="button" onclick="age_calculator()" value="Submit"></input>
+</p>
+</div>
+<div id="result"></div>
+
+<!-- Needs to be after the div is created. Else getElementById returns null -->
+<script type="text/javascript">
+	var age_calculator=function()
+	{
+		var my_div=document.getElementById("result");
+		my_div.innerHTML="";
+		var cur_year=new Date().getFullYear();
+		var birth_year=document.getElementById("birth_year").value;
+		var age=cur_year-birth_year;
+		my_div.innerHTML="<p> You are either "+age+" or "+(age-1)+" years old. </p>";
+	}
+</script>
+</body>
+</html>
